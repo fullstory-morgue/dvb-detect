@@ -1,0 +1,30 @@
+#!/bin/sh
+sync
+
+case "$1" in
+	load)
+		rmmod btaudio &> /dev/null
+		modprobe videodev
+		modprobe v4l1-compat
+		modprobe v4l2-common
+		modprobe video-buf
+		modprobe bttv
+		modprobe dvb-core
+		modprobe cx24110
+		modprobe bt878
+		modprobe dst
+		modprobe dvb-bt8xx
+		echo
+		;;
+	unload)
+		rmmod dvb-bt8xx dst bt878 cx24110 bttv btcx-risc video-buf \
+		v4l2-common v4l1-compat dvb-core videodev i2c-core
+		echo
+		;;
+	*)
+		echo "Usage$0 {load|unload}"
+		exit 1
+esac
+
+sync
+
