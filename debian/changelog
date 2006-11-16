@@ -1,6 +1,7 @@
-dvb-detect (0.1.2) UNRELEASED; urgency=low
+dvb-detect (0.1.2) ORPHANED; urgency=low
 
   * NOT RELEASED YET
+  * ORPHANED
 
  -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 11 Mar 2006 23:17:18 +0100
 
